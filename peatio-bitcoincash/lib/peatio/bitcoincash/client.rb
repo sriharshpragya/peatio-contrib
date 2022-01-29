@@ -29,7 +29,7 @@ module Peatio
 
       def json_rpc(method, params = [])
         response = connection.post \
-          '/',
+          '/wallet/your_wallet_name',
           { jsonrpc: '1.0', method: method, params: params }.to_json,
           { 'Accept' => 'application/json',
             'Content-Type' => 'application/json' }
